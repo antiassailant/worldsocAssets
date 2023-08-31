@@ -1,0 +1,248 @@
+/* 
+
+    Created by assailant.
+
+*/
+
+/* Basic Value Changes */
+
+:root {
+    --primary: rgb(255, 100, 15);
+    --primary-dark: rgb(100, 50, 7);
+    --logo: url("http://worldsoc.wikidot.com/local--files/start/strength.svg");
+}
+
+/* Fonts */
+
+@font-face {
+    font-family: 'perfectDOS';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Perfect DOS VGA 437'), url('https://fonts.cdnfonts.com/s/7377/Perfect DOS VGA 437.woff') format('woff');
+}
+
+/* Main CSS */
+
+#html-body {
+    background: black;
+}
+
+p,
+div,
+span,
+pre {
+    color: white;
+}
+
+#header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 84px;
+    background: linear-gradient(0deg, black 11%, transparent), conic-gradient(from 90deg at 1px 1px, transparent 90deg, var(--primary-dark) 0) 0 0/10px 10px;
+}
+
+#header h1 a {
+    display: block;
+    width: 150px;
+    height: 150px;
+    content: "";
+    background: var(--logo);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: transparent;
+    filter: drop-shadow(0px 0px 5px var(--primary));
+    animation-name: rotator;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+}
+
+#header h1 {
+    perspective: 800px;
+}
+
+#header h1 a span {
+    display: none;
+}
+
+#header h2 {
+    display: none;
+}
+
+#side-bar {
+    display: none;
+}
+
+#main-content {
+    margin-left: 0;
+}
+
+div#content-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+div#main-content {
+    width: 1000px;
+}
+
+a {
+    color: var(--primary);
+}
+
+#top-bar a:hover {
+    border-bottom: 10px solid var(--primary) !important;
+}
+
+#top-bar li a {
+    padding: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-bottom: 10px solid transparent;
+    text-decoration: none !important;
+}
+
+.hovertip {
+    background: rgb(31, 31, 31);
+    outline: 2px solid var(--primary);
+    color: white;
+}
+
+.page-options-bottom a {
+    text-decoration: none;
+    text-transform: uppercase;
+    background: rgb(31, 31, 31);
+    border: 2px solid var(--primary);
+    padding: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+div#page-options-bottom {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+div#page-options-bottom-2 a {
+    padding: 3px;
+}
+
+div#page-options-bottom-2 {
+    display: flex;
+    justify-content: center;
+}
+
+div.buttons input,
+input.button,
+button,
+file,
+a.button,
+input,
+input.text,
+textarea {
+    background: rgb(31, 31, 31);
+    color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+.wd-editor-toolbar-panel {
+    filter: invert(1);
+}
+
+div#lock-info {
+    background: rgb(31, 31, 31);
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+div#account-options {
+    background: rgb(31, 31, 31);
+    border-color: var(--primary);
+}
+
+blockquote {
+    border: none;
+    border-left: 8px solid var(--primary);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background: linear-gradient(90deg, rgb(12, 6, 0), black);
+    border-radius: 7px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.quote {
+    border: none;
+    border-left: 8px solid var(--primary);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background: linear-gradient(90deg, rgb(12, 6, 0), black);
+    border-radius: 7px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.quote p {
+    margin-left: 1em;
+}
+
+.owindow {
+    color: var(--primary);
+    background: black;
+    border: 2px solid var(--primary);
+}
+
+.owindow .title {
+    background: black;
+}
+
+.modal-body img {
+    background: black !important;
+}
+
+.owindow .button-bar a {
+    background: black;
+    border: 2px solid var(--primary);
+}
+
+.imageright {
+    float: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid var(--primary);
+    padding: 5px;
+    background: rgb(31, 31, 31);
+}
+
+.imagetext {
+    width: 100%;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background: rgb(15, 15, 15);
+}
+
+.tblock {
+    background-color: rgb(31, 31, 31);
+    outline: 2px solid rgb(15, 15, 15);
+    border: 2px solid var(--primary);
+    padding: 5px;
+    color: white;
+    font-family: monospace;
+    width: 800px;
+}
+
+/* Animations */
+
+@keyframes rotator {
+    from {
+        transform: rotate3d(0, 1, 0, 0deg);
+    }
+
+    to {
+        transform: rotate3d(0, 1, 0, 359deg);
+    }
+}
