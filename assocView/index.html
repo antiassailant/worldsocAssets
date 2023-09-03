@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASSOC</title>
+    <style>
+        body {
+            display: flex;
+            margin: 0;
+            background-color: black;
+            perspective: 800px;
+            overflow: hidden;
+            justify-content: center;
+            align-items: center;
+        }
+        .assocbg {
+            top: 0;
+            position: absolute;
+            width: 200vw;
+            height: 540px;
+            background: linear-gradient(180deg, rgba(255, 100, 17, 0.1), black), url(gridbg.svg);
+            transform: rotate3d(1, 0, 0, -83deg);
+            background-size: 7001px;
+            transform-origin: top center;
+        }
+        .down {
+            top: 100vh;
+        }
+        .mainlogo {
+            width: 500px;
+            height: 500px;
+            background: url(synthdivision.png);
+            background-size: cover;
+            animation-name: onegod;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-duration: 3s;
+        }
+        .wtier {
+            background: url(combinescanline.jpg);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            filter: opacity(0.1);
+            background-size: cover;
+            
+        }
+        @keyframes onegod {
+            from {
+                transform: rotate3d(0, 1, 0, 0deg);
+            }
+            to {
+                transform: rotate3d(0, 1, 0, 359deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="assocbg"></div>
+    <div class="assocbg down"></div>
+    <div class="mainlogo"></div>
+    <div class="wtier"></div>
+</body>
+</html>
